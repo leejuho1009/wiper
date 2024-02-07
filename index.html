@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        div{clear: both;}
+    
+        .menu_container {
+        background-color: #fff;
+        width: 500px;
+        height: 700px;
+        padding: 20px;
+        box-sizing: border-box;
+        box-shadow: 3px 3px 6px rgba(0,0,0, 0.5);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .menu_header {
+        font-size: 24px;
+        font-weight: 600;
+        color: #222;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .menu_list,
+    .menu_button_area {
+        width: 100%;
+    }
+    
+    .menu_list ul,
+    .menu_button_area ul {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 0 20px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+    }
+    
+    .menu_list ul li {
+        width: 50%;
+    }
+    
+    .menu_button_area {
+        margin: 20px 0;
+    }
+    
+    .menu_button_area ul{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .menu_button_area ul li {
+        list-style: none;
+        margin: 0 5px;
+    }
+    
+    .menu_button_area ul li button {
+        background-color: transparent;
+        border: none;
+        background: #eee;
+        padding: 5px 15px;
+        border-radius: 100px;
+        cursor: pointer;
+    }
+    
+    .menu_button_area ul li button.active {
+        background: #222;
+        color: #fff;
+    }
+    
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: "Montserrat";
+    }
+    .searchbox{
+      width: 90%;
+      margin: 10px auto;
+    }
+    .header{
+      background: #ECDFBF;
+      overflow: hidden;
+      padding: 20px;
+      text-align: center;
+    }
+    .header h1{
+      text-transform: uppercase;
+      color: white;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+    #value{
+      border: none;
+      background: #E0D3B6;
+      padding: 6px;
+      font-size: 18px;
+      width: 80%;
+      border-radius: 6px;
+      color: white;
+    }
+    #value:focus{
+      outline: none;
+    }
+    .container{
+        overflow-y: auto;
+        height: 400px;
+      background: #FFFfff;
+      padding: 1%;
+    }
+    .item{
+      margin: 3% 0px;
+      display: flex;
+      align-items: center;
+    }
+    .icon{
+      width: 25px;
+      height: 25px;
+      background: #E0D3B6;
+      color: white;
+      font-size: 15px;
+      text-align: center;
+      line-height: 25px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    .name{
+      font-size: 17px;
+      font-weight: 470;
+      color: #333;
+    }
+    
+    </style>
+
+    <center>
+        <div class="menu_container" data-filter-id="wiper">
+        <div class="menu_header">와이퍼 차종표</div>
+        <div class="menu_button_area">
+            <ul>
+                <li><button type="button" data-filter="all" class="active">All</button></li>
+                <li><button type="button" data-filter="kor">기아</button></li>
+                <li><button type="button" data-filter="jp">현대</button></li>
+                <li><button type="button" data-filter="ch">쉐보레</button></li>
+            </ul>
+        </div>
+    
+        <div class="searchbox">
+            <div class="header">
+              <h1 style="font-size: 26px;">자신의 차량을 검색해보세요.</h1>
+              <input onkeyup="filter()" type="text" id="value" placeholder="차량 모델명을 검색하세요.">
+            </div>
+      
+            <div class="container" style="overflow-y: auto;">
+              <div class="item">
+
+                <li data-filter="jp" style="list-style: none;"><span class="name">현대 갤로퍼 (M) 91-03 400 400 2
+                </span></li>
+              </div>
+              <div class="item">
+                <li data-filter="kor" style="list-style: none;"><span class="name">기아</span></li>
+              </div>
+              <div class="item">
+                <li data-filter="kor" style="list-style: none;"><span class="name">현대</span></li>
+              </div>
+              
+              <div class="item">
+                <li data-filter="kor" style="list-style: none;"><span class="name">현대</span></li>
+              </div>
+              
+              <div class="item">
+                <li data-filter="kor" style="list-style: none;"><span class="name">현대</span></li>
+              </div>
+              
+              <div class="item">
+                <li data-filter="kor" style="list-style: none;"><span class="name">현대</span></li>
+              </div>
+              
+              <div class="item">
+                <li data-filter="kor" style="list-style: none;"><span class="name">현대</span></li>
+              </div>
+              
+              <div class="item">
+                <li data-filter="kor" style="list-style: none;"><span class="name">현대</span></li>
+              </div>
+              
+              <div class="item">
+                <li data-filter="kor" style="list-style: none;"><span class="name">현대</span></li>
+              </div>
+              
+              <div class="item">
+                <li data-filter="kor" style="list-style: none;"><span class="name">현대</span></li>
+              </div>
+              <div class="item">
+                <li data-filter="kor" style="list-style: none;"><span class="name">현대</span></li>
+              </div>
+              
+              <div class="item">
+                <li data-filter="kor" style="list-style: none;"><span class="name">현대</span></li>
+              </div>
+              
+              <div class="item">
+                <li data-filter="kor" style="list-style: none;"><span class="name">현대</span></li>
+              </div>
+              
+              <div class="item">
+                <li data-filter="kor" style="list-style: none;"><span class="name">현대</span></li>
+              </div>
+              
+              
+              
+              
+    </div>
+</div>
+</div></center>
+
+<script> // 필터 버튼 //
+    const filterMenuInit = () => {
+       const filters = document.querySelectorAll('[data-filter-id]');
+
+       filters.forEach(filter => {
+           const filterBtns = [...filter.querySelectorAll('[data-filter]')].filter(el => el.nodeName === 'BUTTON');
+           const filterLists = [...filter.querySelectorAll('[data-filter]')].filter(el => el.nodeName === 'LI');
+
+           filterBtns.forEach(btn => {
+               btn.addEventListener('click', () => {
+                   const filterType = btn.getAttribute('data-filter');
+
+                   filterBtns.forEach(btn => btn.classList.remove('active'));
+                   btn.classList.add('active');
+
+                   filterLists.forEach(list => {
+                       if (filterType === 'all'){
+                           list.style.display = 'list-item';
+                           return;
+                       }
+                       
+                       list.style.display = list.getAttribute('data-filter') === filterType ? 'list-item' : 'none';
+                   })
+               });
+           })
+       })
+   };
+   
+   filterMenuInit();
+</script>
+
+<script type="text/javascript"> // 검색 엔진 //
+   function filter(){
+
+     var value, name, item, i;
+
+     value = document.getElementById("value").value.toUpperCase();
+     item = document.getElementsByClassName("item");
+
+     for(i=0;i<item.length;i++){
+       name = item[i].getElementsByClassName("name");
+       if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+         item[i].style.display = "flex";
+       }else{
+         item[i].style.display = "none";
+       }
+     }
+   }
+</script>
+</body>
+
+</html>
